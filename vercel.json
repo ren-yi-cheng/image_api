@@ -1,7 +1,14 @@
 {
-  "functions": {
-    "api/analyze.py": {
-      "runtime": "python3.12"
+  "builds": [
+    {
+      "src": "api/color.py",
+      "use": "@vercel/python"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/color",
+      "dest": "api/color.py"
+    }
+  ]
 }
